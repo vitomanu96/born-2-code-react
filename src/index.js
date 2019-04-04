@@ -9,10 +9,12 @@ import {createStore, combineReducers} from 'redux'
 import {devToolsEnhancer} from 'redux-devtools-extension'
 import {Provider} from 'react-redux'
 import {defaultWeatherReducer} from './default-city-weather/redux/weather.redux'
+import {reducer as formReducer} from 'redux-form'
 
 
 const rootReducer = combineReducers({
-    defaultWeather: defaultWeatherReducer
+    defaultWeather: defaultWeatherReducer,
+    form: formReducer
 })
 /**
  * REDUX STORE
