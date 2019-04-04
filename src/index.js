@@ -8,9 +8,12 @@ import * as serviceWorker from './serviceWorker'
 import {createStore, combineReducers} from 'redux'
 import {devToolsEnhancer} from 'redux-devtools-extension'
 import {Provider} from 'react-redux'
+import {defaultWeatherReducer} from './default-city-weather/redux/weather.redux'
 
 
-const rootReducer = combineReducers({})
+const rootReducer = combineReducers({
+    defaultWeather: defaultWeatherReducer
+})
 /**
  * REDUX STORE
  */
